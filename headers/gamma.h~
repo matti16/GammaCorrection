@@ -6,6 +6,4 @@
 
 extern void gamma_correct(int* pixels, int size, float a, float gamma);
 
-extern void single_gamma(int* value, float a, float gamma);
-
-#endif
+#endif;

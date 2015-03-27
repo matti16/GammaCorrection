@@ -11,8 +11,8 @@ typedef struct t_pgm{
 }t_pgm;
 
 
-extern int* load(char* filename, t_pgm* img, int num_tasks, int* length);
+extern int* load(char* filename, t_pgm img, int num_tasks, int* lenght);
 
-extern void store(t_pgm* img, int* pixels);
+extern void store(t_pgm img, int* pixels);
 
 #endif
