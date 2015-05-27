@@ -8,8 +8,8 @@ int main(int argc, char* argv[]){
 	if(argc < 4){
 		printf("gamma <input-file> <A-param> <gamma>\n");
 		exit(-1);
-	}else if ( atof(argv[2]) <= 0 ){
-		printf("<A-param> has to be greater then 0.\n");
+	}else if ( atof(argv[2]) <= 0 || atof(argv[3]) <= 0) ){
+		printf("<A-param> and <gamma> have to be greater then 0.\n");
 		exit(-1);
 	}
 	
