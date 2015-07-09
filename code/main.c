@@ -8,7 +8,7 @@ int main(int argc, char* argv[]){
 	if(argc < 4){
 		printf("gamma <input-file> <A-param> <gamma>\n");
 		exit(-1);
-	}else if ( atof(argv[2]) <= 0 || atof(argv[3]) <= 0) ){
+	}else if ( atof(argv[2]) <= 0 || atof(argv[3]) <= 0 ){
 		printf("<A-param> and <gamma> have to be greater then 0.\n");
 		exit(-1);
 	}
@@ -39,7 +39,7 @@ int main(int argc, char* argv[]){
 
 	//SCATTER
 	int rcvBuffer[chunk_size];
-	printf("Process %d --> Scattering\n", rank);
+	printf("Process %d --> Scattering: chunk size = %d\n", rank, chunk_size);
 	MPI_Scatter(pixels, chunk_size, MPI_INT, rcvBuffer, chunk_size, MPI_INT, 0, MPI_COMM_WORLD);
 	
 	//CORRECT

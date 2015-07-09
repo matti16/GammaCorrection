@@ -30,7 +30,7 @@ int* load(char* filename, t_pgm* img, int num_tasks, int* length){
 	int diff = (size/num_tasks) * num_tasks;
 	int* pixels;
 
-	if(diff == 0){
+	if(diff == size){
 		pixels = (int*) malloc(sizeof(int)*size);
 		*(length) = size;
 	}else{
